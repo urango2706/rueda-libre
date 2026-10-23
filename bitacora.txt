@@ -1,2 +1,16 @@
 bitácora reto 1:
-URL: http://127.0.0.1:5500/index.html
+
+Punto 4
+Request URL: http://127.0.0.1:5500/index.html
+Request method: GET
+Status code: 304 Not Modified
+Remote address: 127.0.0.1:5500
+Referrer policy: strict-origin-when-cross-origin
+
+Punto 5
+Status code: 404 Not Found
+
+Punto 6
+html nos dara la estructura de como organizar los textos ya sea títulos, subtitulos, parrafos etc, 
+El rol que cumplira CSS va a aser darle forma al html es decir el color y las fuentes de los textos los fondos y las secciones
+Para Javascrip nos dara la logica de las operaciones, concexiones(interactividad) y/o secuencias que se realicen dentro de la página 
