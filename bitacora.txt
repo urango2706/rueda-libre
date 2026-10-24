@@ -1,4 +1,5 @@
-bitácora reto 1:
+bitácora
+Reto 1:
 
 Punto 4
 Request URL: http://127.0.0.1:5500/index.html
@@ -14,3 +15,49 @@ Punto 6
 html nos dara la estructura de como organizar los textos ya sea títulos, subtitulos, parrafos etc, 
 El rol que cumplira CSS va a aser darle forma al html es decir el color y las fuentes de los textos los fondos y las secciones
 Para Javascrip nos dara la logica de las operaciones, concexiones(interactividad) y/o secuencias que se realicen dentro de la página 
+
+Reto 2:
+RETO 5 — ESTRUCTURA SEMÁNTICA HTML
+
+1. Página de inicio (index.html)
+- Encabezado (header)
+  - Nombre del negocio
+  - Navegación principal (nav)
+- Contenido principal (main)
+  - Sección de presentación (section)
+  - Sección de servicios (section)
+    - Servicio 1 (article)
+    - Servicio 2 (article)
+    - Servicio 3 (article)
+  - Sección de ubicación y contacto (section)
+- Pie de página (footer)
+  - Horarios de atención
+  - Derechos de autor
+
+2. Página de tarifas (paginas/tarifas.html)
+- Encabezado (header)
+  - Nombre del negocio
+  - Navegación principal (nav)
+- Contenido principal (main)
+  - Sección de tarifas de alquiler (section)
+    - Tabla de precios
+  - Sección de recorridos guiados (section)
+    - Tabla de recorridos
+  - Contenido complementario (aside)
+    - Lista de elementos que se deben llevar
+- Pie de página (footer)
+  - Horarios de atención
+  - Derechos de autor
+
+3. Página de reservas (paginas/reservas.html)
+- Encabezado (header)
+  - Nombre del negocio
+  - Navegación principal (nav)
+- Contenido principal (main)
+  - Sección de reservas (section)
+    - Información de contacto
+  - Contenido complementario (aside)
+    - Horarios de atención
+- Pie de página (footer)
+  - Horarios de atención
+  - Derechos de autor
