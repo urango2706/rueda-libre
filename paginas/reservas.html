@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Reservas</title>
+</head>
+<body>
+
+    <nav>
+         <ul>
+             <li><a href="../index.html">Inicio</a></li>
+             <li><a href="tarifas.html">Tarifas y rutas</a></li>
+             <li><a href="reservas.html">Reservas</a></li>
+         </ul>
+    </nav>
+    <main>
+
+    <h1>Reserva tu bicicleta</h1>
+    <p>Contáctanos: <a href="mailto:rueda.libre@gmail.com">hola@ruedalibre.example</a></p>
+    <h2>Horario de atención</h2>
+
+    <dl>
+        <dt>Lunes a viernes</dt>
+        <dd>7:00 a. m. a 7:00 p. m.</dd>
+
+        <dt>Sábados, domingos y festivos</dt>
+        <dd>6:00 a. m. a 2:00 p. m.</dd>
+    </dl>
+
+
+<main>
+    <section>
+        <h1>Formulario de reserva</h1>
+        <p>Completa tus datos para reservar tu bicicleta.</p>
+
+        <form method="post">
+
+            <fieldset>
+                <legend>Tus datos</legend>
+
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="documento">Número de documento:</label>
+                <input type="text" id="documento" name="documento" required>
+
+                <label for="correo">Correo electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="celular">Celular:</label>
+                <input type="tel" id="celular" name="celular" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Tu alquiler</legend>
+
+                <label for="fecha">Fecha del alquiler:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="bicicleta">Tipo de bicicleta:</label>
+                <select id="bicicleta" name="bicicleta" required>
+                    <option value="">Selecciona una bicicleta</option>
+                    <option value="urbana">Urbana</option>
+                    <option value="montana">Montaña</option>
+                    <option value="electrica">Eléctrica</option>
+                </select>
+
+                <fieldset>
+                    <legend>Plan de alquiler</legend>
+
+                    <input type="radio" id="hora" name="plan" value="1_hora" required>
+                    <label for="hora">1 hora</label>
+
+                    <input type="radio" id="medio_dia" name="plan" value="medio_dia">
+                    <label for="medio_dia">Medio día</label>
+
+                    <input type="radio" id="dia_completo" name="plan" value="dia_completo">
+                    <label for="dia_completo">Día completo</label>
+                </fieldset>
+
+                <label for="cantidad">Cantidad de bicicletas:</label>
+                <input type="number" id="cantidad" name="cantidad" min="1" required>
+
+                <label for="recorrido">Recorrido guiado:</label>
+                <select id="recorrido" name="recorrido" required>
+                    <option value="">Selecciona una opción</option>
+                    <option value="ninguno">Ninguno</option>
+                    <option value="ruta_1">Ruta río y parques</option>
+                    <option value="ruta_2">Ruta Sabores de Barrio</option>
+                    <option value="ruta_3">Ruta reto Palmas</option>
+                </select>
+            </fieldset>
+
+            <fieldset>
+                <legend>Confirmación</legend>
+
+                <label for="comentarios">Comentarios adicionales:</label>
+                <textarea id="comentarios" name="comentarios" rows="4" placeholder="Escribe tus comentarios aquí"></textarea>
+
+                <input type="checkbox" id="politicas" name="politicas" value="aceptadas" required>
+                <label for="politicas">Acepto las políticas de alquiler</label>
+            </fieldset>
+
+            <button type="submit">Enviar reserva</button>
+
+        </form>
+    </section>
+</main>
+
+    
+    </main>
+</body>
+</html>

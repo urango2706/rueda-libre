@@ -61,3 +61,18 @@ RETO 5 — ESTRUCTURA SEMÁNTICA HTML
 - Pie de página (footer)
   - Horarios de atención
   - Derechos de autor
+  ### Justificación de controles del formulario
+
+Día 2
+
+Campo de fecha (`type="date")
+
+control permite seleccionar la fecha del alquiler desde un calendario porque facilita el ingreso de la información y evita errores.
+
+Lista desplegable
+
+la lista desplegable es para el tipo de bicicleta porque el cliente tiene tres opciones: urbana, montaña o eléctrica. Esto evita respuestas diferentes a las que hay en el campo.
+
+Botones de opción 
+
+Utilicé botones de opción para los planes de alquiler porque el usuario debe seleccionar solamente uno: 1 hora, medio día o día completo. Al compartir el mismo atributo `name`, se impide seleccionar varios planes al mismo tiempo.
