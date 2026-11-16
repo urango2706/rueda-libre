@@ -6,7 +6,8 @@
     --color-fondo: #f6efe6;
     --color-superficie: #fff;
     --color-borde: #d8c8b8;
-    --fuente-base: Arial, sans-serif;
+    --fuente-titulos: 'Montserrat', sans-serif;
+    --fuente-texto: 'Open Sans', sans-serif;
     --espacio-pequeno: 0.5rem;
     --espacio-base: 1rem;
     --espacio-medio: 1.5rem;
@@ -18,21 +19,45 @@
 *, *::before, *::after { box-sizing: border-box; }
 body {
     margin: 0;
-    font-family: var(--fuente-base);
+    font-family: var(--fuente-texto);
     color: var(--color-texto);
     background-color: var(--color-fondo);
     line-height: 1.6;
 }
-h1, h2, h3 { line-height: 1.25; margin: 0 0 var(--espacio-base); }
-h1 { font-size: 2rem; }
-h2 { font-size: 1.5rem; }
-h3 { font-size: 1.125rem; }
-p, ul, ol, dl { margin: 0 0 var(--espacio-base); }
-ul, ol { padding-left: var(--espacio-medio); }
-li + li { margin-top: var(--espacio-pequeno); }
-a { color: var(--color-primario); text-underline-offset: 0.2rem; }
-a:hover { text-decoration-thickness: 0.15rem; }
-a:focus-visible { outline: 0.2rem solid currentColor; outline-offset: 0.25rem; }
+h1, h2, h3 { 
+    line-height: 1.25;
+    margin: 0 0 var(--espacio-base);
+    font-family: var(--fuente-titulos);
+    font-weight: 700;
+}
+h1 {
+     font-size: 2rem;
+     }
+h2 { 
+    font-size: 1.5rem; 
+}
+h3 { 
+    font-size: 1.125rem; 
+}
+p, ul, ol, dl { 
+    margin: 0 0 var(--espacio-base);
+}
+ul, ol { 
+    padding-left: var(--espacio-medio); 
+}
+li + li {
+    margin-top: var(--espacio-pequeno); 
+}
+a { 
+    color: var(--color-primario); text-underline-offset: 0.2rem; 
+}
+a:hover { 
+    text-decoration-thickness: 0.15rem; 
+}
+a:focus-visible { 
+    outline: 0.2rem solid currentColor;
+    outline-offset: 0.25rem; 
+}
 
 /* 3. Encabezado y navegación */
 header, body > nav, footer {
@@ -48,9 +73,15 @@ nav ul {
     margin: 0;
     list-style: none;
 }
-nav li + li { margin-top: 0; }
-nav a, header a, footer a { color: var(--color-superficie); }
-nav a:hover, nav a:focus-visible { color: var(--color-acento); }
+nav li + li { 
+    margin-top: 0; 
+}
+nav a, header a, footer a { 
+    color: var(--color-superficie); 
+}
+nav a:hover, nav a:focus-visible { 
+    color: var(--color-acento); 
+}
 
 /* 4. Contenido y tarjetas */
 main {
@@ -82,12 +113,29 @@ table {
     margin-bottom: var(--espacio-medio);
     background-color: var(--color-superficie);
 }
-caption { text-align: left; font-weight: bold; padding: var(--espacio-base); }
-th, td { padding: var(--espacio-base); border: 0.0625rem solid var(--color-borde); text-align: left; }
-thead { color: var(--color-superficie); background-color: var(--color-primario); }
-dt { font-weight: bold; }
-dd { margin: 0 0 var(--espacio-base); }
-footer { margin-top: var(--espacio-grande); }
+caption { 
+    text-align: left; 
+    font-weight: bold; 
+    padding: var(--espacio-base); 
+}
+th, td { 
+    padding: var(--espacio-base); 
+    border: 0.0625rem solid var(--color-borde);
+    text-align: left; 
+}
+thead { 
+    color: var(--color-superficie); 
+    background-color: var(--color-primario); 
+}
+dt { 
+    font-weight: bold; 
+}
+dd { 
+    margin: 0 0 var(--espacio-base); 
+}
+footer { 
+    margin-top: var(--espacio-grande);
+}
 
 @media (max-width: 40rem) {
     header, body > nav, footer { padding: var(--espacio-base); }
