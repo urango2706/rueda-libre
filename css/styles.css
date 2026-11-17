@@ -112,6 +112,42 @@ img {
     border-radius: var(--radio);
 }
 
+.flota {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr));
+    gap: var(--espacio-medio);
+}
+
+.bicicleta {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    margin: 0;
+    padding: var(--espacio-base);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+    background-color: var(--color-fondo);
+}
+.bicicleta img {
+    width: 100%;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+}
+.bicicleta-reservar {
+    margin-top: auto;
+    align-self: flex-start;
+    padding: var(--espacio-pequeno) var(--espacio-base);
+    border-radius: var(--radio);
+    color: var(--color-superficie);
+    background-color: var(--color-primario);
+    font-weight: bold;
+    text-decoration: none;
+}
+.bicicleta-reservar:hover {
+    color: var(--color-texto);
+    background-color: var(--color-acento);
+}
+
 /* 5. Tablas de tarifas: desplazamiento en pantallas pequeñas */
 table {
     display: block;
