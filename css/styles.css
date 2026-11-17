@@ -148,6 +148,68 @@ img {
     background-color: var(--color-acento);
 }
 
+/* Layout de escritorio: Grid controla filas y columnas. */
+.portada {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: var(--espacio-grande);
+    align-items: center;
+}
+.portada img { width: 100%; margin: 0; }
+.rutas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--espacio-medio);
+}
+.ruta { margin: 0; }
+.ruta img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+.reservas-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: var(--espacio-medio);
+    align-items: start;
+}
+.contacto {
+    padding: var(--espacio-medio);
+    border-radius: var(--radio);
+    background: var(--color-superficie);
+    overflow-wrap: anywhere;
+}
+.fila-campos {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--espacio-base);
+}
+fieldset {
+    min-width: 0;
+    margin: 0 0 var(--espacio-base);
+    padding: var(--espacio-base);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+}
+legend { font-weight: bold; }
+label { display: block; }
+input, select, textarea, button { font: inherit; }
+input:not([type="radio"]):not([type="checkbox"]), select, textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    margin-bottom: var(--espacio-base);
+    padding: var(--espacio-pequeno);
+    border: 1px solid var(--color-borde);
+    border-radius: var(--radio);
+}
+textarea { resize: vertical; }
+input[type="radio"] + label, input[type="checkbox"] + label { display: inline; }
+button {
+    padding: var(--espacio-pequeno) var(--espacio-base);
+    border: 0;
+    border-radius: var(--radio);
+    color: var(--color-superficie);
+    background: var(--color-primario);
+    cursor: pointer;
+}
+
 /* 5. Tablas de tarifas: desplazamiento en pantallas pequeñas */
 table {
     display: block;

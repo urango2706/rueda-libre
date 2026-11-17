@@ -12,9 +12,9 @@ Punto 5
 Status code: 404 Not Found
 
 Punto 6
-html nos dara la estructura de como organizar los textos ya sea títulos, subtitulos, parrafos etc, 
+html nos dara la estructura de como organizar los textos ya sea títulos, subtitulos, parrafos etc,
 El rol que cumplira CSS va a aser darle forma al html es decir el color y las fuentes de los textos los fondos y las secciones
-Para Javascrip nos dara la logica de las operaciones, concexiones(interactividad) y/o secuencias que se realicen dentro de la página 
+Para Javascrip nos dara la logica de las operaciones, concexiones(interactividad) y/o secuencias que se realicen dentro de la página
 
 Reto 2:
 RETO 5 — ESTRUCTURA SEMÁNTICA HTML
@@ -73,9 +73,19 @@ Lista desplegable
 
 la lista desplegable es para el tipo de bicicleta porque el cliente tiene tres opciones: urbana, montaña o eléctrica. Esto evita respuestas diferentes a las que hay en el campo.
 
-Botones de opción 
+Botones de opción
 
 Utilicé botones de opción para los planes de alquiler porque el usuario debe seleccionar solamente uno: 1 hora, medio día o día completo. Al compartir el mismo atributo `name`, se impide seleccionar varios planes al mismo tiempo.
 
 semana 2
-al cambiar el ancho del navegador los elementos se van alineando a su tamño 
+al cambiar el ancho del navegador los elementos se van alineando a su tamño
+Semana 2 - día 2: layout en 2 dimensiones
+- Portada: Grid con 1fr y 1fr para texto e imagen. align-items: center centra el texto verticalmente.
+- Galería Nuestras rutas: Grid con tres columnas iguales; gap separa las tarjetas.
+- Reservas: Grid con 2fr y 1fr para formulario a la izquierda y contacto a la derecha.
+- Documento y celular: Grid con dos columnas iguales para mantener cada etiqueta junto a su campo.
+- Encabezado: Flexbox porque distribuye nombre y menú en una fila y los centra verticalmente.
+- Pie: Flexbox porque distribuye los tres bloques en una fila, alineados por arriba.
+- minmax(0, ...) permite que las columnas se reduzcan sin imponer el ancho mínimo del contenido.
+- Se conservan fotos locales de referencia y enlaces relativos para GitHub Pages.
+- Verificación de esta entrega: revisión de estructura HTML, rutas locales y git diff --check. La prueba visual en DevTools queda pendiente.

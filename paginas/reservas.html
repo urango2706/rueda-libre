@@ -19,21 +19,10 @@
     </header>
 
     <main>
+        <h1>Reserva tu bicicleta</h1>
+        <div class="reservas-layout">
         <section>
-            <h1>Reserva tu bicicleta</h1>
-            <p>Contáctanos: <a href="mailto:rueda.libre@gmail.com">hola@ruedalibre.example</a></p>
-            <h2>Horario de atención</h2>
-
-            <dl>
-                <dt>Lunes a viernes</dt>
-                <dd>7:00 a. m. a 7:00 p. m.</dd>
-
-                <dt>Sábados, domingos y festivos</dt>
-                <dd>6:00 a. m. a 2:00 p. m.</dd>
-            </dl>
-        </section>
-        <section>
-            <h1>Formulario de reserva</h1>
+            <h2>Formulario de reserva</h2>
             <p>Completa tus datos para reservar tu bicicleta.</p>
 
             <form method="post">
@@ -44,14 +33,20 @@
                     <label for="nombre">Nombre completo:</label>
                     <input type="text" id="nombre" name="nombre" required>
 
-                    <label for="documento">Número de documento:</label>
-                    <input type="text" id="documento" name="documento" required>
+                    <div class="fila-campos">
+                        <div>
+                            <label for="documento">Número de documento:</label>
+                            <input type="text" id="documento" name="documento" required>
+                        </div>
+                        <div>
+                            <label for="celular">Celular:</label>
+                            <input type="tel" id="celular" name="celular" required>
+                        </div>
+                    </div>
 
                     <label for="correo">Correo electrónico:</label>
                     <input type="email" id="correo" name="correo" required>
 
-                    <label for="celular">Celular:</label>
-                    <input type="tel" id="celular" name="celular" required>
                 </fieldset>
 
                 <fieldset>
@@ -108,6 +103,18 @@
 
             </form>
         </section>
+        <aside class="contacto" aria-labelledby="titulo-contacto">
+            <h2 id="titulo-contacto">Contacto y horarios</h2>
+            <p>Escríbenos: <a href="mailto:rueda.libre@gmail.com">rueda.libre@gmail.com</a></p>
+            <p>Llámanos: <a href="tel:+573024210809">3024210809</a></p>
+            <dl>
+                <dt>Lunes a viernes</dt>
+                <dd>7:00 a. m. a 7:00 p. m.</dd>
+                <dt>Sábados, domingos y festivos</dt>
+                <dd>6:00 a. m. a 2:00 p. m.</dd>
+            </dl>
+        </aside>
+        </div>
     </main>
     <footer>
         <div>
