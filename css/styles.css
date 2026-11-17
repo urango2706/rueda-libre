@@ -15,7 +15,7 @@
     --radio: 0.5rem;
 }
 
-/* 2. Base: rem toma como referencia el tamaño de letra raíz */
+/* 2. Base mobile-first: una columna. rem usa el tamaño de letra raíz. */
 *, *::before, *::after { box-sizing: border-box; }
 body {
     margin: 0;
@@ -23,6 +23,7 @@ body {
     color: var(--color-texto);
     background-color: var(--color-fondo);
     line-height: 1.6;
+    overflow-wrap: break-word;
 }
 h1, h2, h3 { 
     line-height: 1.25;
@@ -61,13 +62,14 @@ a:focus-visible {
 
 /* 3. Encabezado y navegación */
 header, body > nav, footer {
-    padding: var(--espacio-medio) var(--espacio-grande);
+    padding: var(--espacio-base);
     color: var(--color-superficie);
     background-color: var(--color-primario);
 }
 nav ul {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     gap: var(--espacio-base) var(--espacio-medio);
     padding: 0;
     margin: 0;
@@ -84,6 +86,9 @@ nav a:hover, nav a:focus-visible {
 }
 header {
     display: flex;
+    flex-direction: column;
+    gap: var(--espacio-base);
+    text-align: center;
     justify-content: space-between;
     align-items: center;
 }
@@ -98,7 +103,8 @@ main {
     padding: var(--espacio-grande) var(--espacio-base);
 }
 section, .tarjeta {
-    padding: var(--espacio-medio);
+    min-width: 0;
+    padding: var(--espacio-base);
     margin-bottom: var(--espacio-medio);
     border-radius: var(--radio);
     background-color: var(--color-superficie);
@@ -148,36 +154,36 @@ img {
     background-color: var(--color-acento);
 }
 
-/* Layout de escritorio: Grid controla filas y columnas. */
+/* Layout móvil: los bloques se apilan en una columna. */
 .portada {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--espacio-grande);
     align-items: center;
 }
 .portada img { width: 100%; margin: 0; }
 .rutas {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--espacio-medio);
 }
 .ruta { margin: 0; }
 .ruta img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
 .reservas-layout {
     display: grid;
-    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--espacio-medio);
     align-items: start;
 }
 .contacto {
-    padding: var(--espacio-medio);
+    padding: var(--espacio-base);
     border-radius: var(--radio);
     background: var(--color-superficie);
     overflow-wrap: anywhere;
 }
 .fila-campos {
     display: grid;
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: minmax(0, 1fr);
     gap: var(--espacio-base);
 }
 fieldset {
@@ -210,11 +216,13 @@ button {
     cursor: pointer;
 }
 
-/* 5. Tablas de tarifas: desplazamiento en pantallas pequeñas */
+/* 5. Tablas móviles: todas las columnas caben, sin ocultar información. */
 table {
-    display: block;
+    width: 100%;
     max-width: 100%;
-    overflow-x: auto;
+    table-layout: fixed;
+    font-size: 0.8125rem;
+    line-height: 1.4;
     border-collapse: collapse;
     margin-bottom: var(--espacio-medio);
     background-color: var(--color-superficie);
@@ -225,7 +233,9 @@ caption {
     padding: var(--espacio-base); 
 }
 th, td { 
-    padding: var(--espacio-base); 
+    padding: 0.375rem 0.25rem;
+    overflow-wrap: anywhere;
+    vertical-align: top;
     border: 0.0625rem solid var(--color-borde);
     text-align: left; 
 }
@@ -242,13 +252,33 @@ dd {
 footer { 
     margin-top: var(--espacio-grande);
     display: flex;
+    flex-direction: column;
+    gap: var(--espacio-medio);
     justify-content: space-between;
     align-items: flex-start;
     
 }
 
-@media (max-width: 40rem) {
-    header, body > nav, footer { padding: var(--espacio-base); }
-    section, .tarjeta { padding: var(--espacio-base); }
+/* Tablet: ampliar solo lo que ya dispone de espacio suficiente. */
+@media (min-width: 768px) {
+    header, footer {
+        flex-direction: row;
+        text-align: left;
+        padding: var(--espacio-medio) var(--espacio-grande);
+    }
+    nav ul { justify-content: flex-start; }
+    footer > div { flex: 1; min-width: 0; }
+    section, .tarjeta, .contacto { padding: var(--espacio-medio); }
+    .portada, .fila-campos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+    .rutas { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    table { font-size: 1rem; }
     th, td { padding: var(--espacio-pequeno); }
+}
+
+/* Escritorio: tres rutas y formulario/contacto en proporción 2:1. */
+@media (min-width: 1200px) {
+    .rutas { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .reservas-layout { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
 }

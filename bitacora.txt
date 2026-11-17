@@ -89,3 +89,23 @@ Semana 2 - día 2: layout en 2 dimensiones
 - minmax(0, ...) permite que las columnas se reduzcan sin imponer el ancho mínimo del contenido.
 - Se conservan fotos locales de referencia y enlaces relativos para GitHub Pages.
 - Verificación de esta entrega: revisión de estructura HTML, rutas locales y git diff --check. La prueba visual en DevTools queda pendiente.
+
+Semana 2 - día 2: mobile first (v1.5)
+Los estilos base describen el móvil. Se usa min-width: 768px para tablet y min-width: 1200px para escritorio.
+Problemas identificados al revisar el layout anterior y soluciones:
+1. Portada, rutas y reservas mantenían varias columnas incluso con poco espacio. Ahora parten de una columna; la portada pasa a dos en tablet, las rutas a dos en tablet y tres en escritorio, y reservas pasa a 2:1 en escritorio.
+2. El nombre del negocio competía con el menú por el ancho disponible. Ahora el header usa flex-direction: column y centra el menú en móvil; desde tablet vuelve a una fila. El footer también pasa de columna a fila.
+3. Las tablas usaban display: block y overflow-x: auto, obligando a desplazarse lateralmente. Ahora tienen width: 100%, table-layout: fixed, fuente de 13px y relleno reducido en móvil; el texto puede ocupar varias líneas sin eliminar columnas ni datos.
+4. Documento y celular quedaban en dos columnas demasiado estrechas. Ahora se apilan en móvil y recuperan las dos columnas desde 768px.
+5. Se conserva max-width: 100% y height: auto en todas las imágenes para que no excedan su contenedor.
+
+Matriz esperada según el CSS (no equivale a una prueba visual):
+Ancho | Portada | Rutas | Reservas | Header y footer
+360px | 1 columna | 1 columna | 1 columna | apilados
+768px | 2 columnas | 2 columnas | 1 columna | en fila
+1280px | 2 columnas | 3 columnas | 2:1 | en fila
+
+Verificación realizada: comprobación de enlaces y archivos locales, estructura de las tres páginas, reglas responsive y git diff --check.
+Prueba DevTools pendiente: el acceso automatizado al navegador no está disponible en esta sesión; no se han registrado observaciones visuales a 360, 768 ni 1280px.
+Publicación: GitHub Pages ya responde en https://urango2706.github.io/rueda-libre/ y recibe los cambios de main. Esta entrega identifica la versión 1.5 en las tres páginas.
+Prueba en celular real pendiente: abrir ese enlace, visitar inicio/tarifas/reservas y comprobar lectura, menú, tablas y campos sin desplazamiento horizontal. Registrar después las observaciones reales.
