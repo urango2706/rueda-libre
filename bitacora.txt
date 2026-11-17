@@ -76,3 +76,6 @@ la lista desplegable es para el tipo de bicicleta porque el cliente tiene tres o
 Botones de opción 
 
 Utilicé botones de opción para los planes de alquiler porque el usuario debe seleccionar solamente uno: 1 hora, medio día o día completo. Al compartir el mismo atributo `name`, se impide seleccionar varios planes al mismo tiempo.
+
+semana 2
+al cambiar el ancho del navegador los elementos se van alineando a su tamño 
